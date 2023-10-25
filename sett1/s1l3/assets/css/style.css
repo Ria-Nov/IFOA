@@ -1,0 +1,71 @@
+/* header */
+
+header{
+    text-align: center;
+}
+
+.logo{
+    width: 10%;
+}
+
+.phead{
+ color:#2A8383;
+ font-size: smaller;
+ background-color: #FDFBF1;
+ border-top: 2px solid #FDECBE;
+ padding: 10px;
+}
+
+.hsub{
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+/* main */
+
+.maindiv, .sectiondiv{
+    margin: 0 auto;
+    text-align:center;
+    width: 50%;
+}
+
+.maindiv p, .sectiondiv p, .sectiondiv h3 {
+    text-align: left;
+}
+
+.focacciaimg{
+    border-radius: 10px;
+    box-shadow: 0.2em 0.2em 0.5em #938f8f;
+}
+
+figcaption{
+    color: #D5D5D5;
+}
+
+.featured{
+    border-left: 1px solid #FDECBE;
+    padding-left: 10px;
+    text-transform: uppercase;
+    color: #a10c0c;
+    font-weight: bolder;
+}
+
+p.featured span{
+    text-transform: capitalize;
+}
+
+/* Ingredients Section */
+
+.sectiondiv h2 {
+    border-bottom: 1px solid #7cd9d9;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.sectiondiv ul{
+    text-align: left;
+    line-height: 1.5em;
+}
+
+
+
