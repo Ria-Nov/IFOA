@@ -1,3 +1,7 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 /* header */
 
 header{
@@ -23,10 +27,10 @@ header{
 
 /* main */
 
-.maindiv, .sectiondiv{
+.maindiv, .sectiondiv, img{
     margin: 0 auto;
     text-align:center;
-    width: 50%;
+    width: 50vw;
 }
 
 .maindiv p, .sectiondiv p, .sectiondiv h3 {
@@ -54,7 +58,7 @@ p.featured span{
     text-transform: capitalize;
 }
 
-/* Ingredients Section */
+/* Ingredients Section + Method */
 
 .sectiondiv h2 {
     border-bottom: 1px solid #7cd9d9;
