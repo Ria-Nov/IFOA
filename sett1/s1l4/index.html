@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body id="bgbody">
     
-    <header id="bgheader" class="width80">
+    <header id="bgheader" class="width81">
         <div>
             <img src="assets/img/logo.svg" id="imgheader"/>
         </div>
@@ -22,8 +22,8 @@
             </ul>
         </nav>
     </header>
-<div id="bgbody" >
-    <main class="width80" id="bgmain">
+<div id="bgmain" class="width80" >
+    <main>
 
         <article>
         
@@ -112,41 +112,43 @@
             <h2>Novità</h2>
             <p> Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla nostra newsletter: </p>
             <form>
-                <input type="email" placeholder="inserisci la tua email">
+                <input type="email" placeholder="inserisci l'email">
                 <button type="button">Iscriviti!</button>
 
             </form>
         </section>
 
     </main>
-    <aside class="width80" id="bgaside">
-        <div>
-            <h2>Articoli Correlati</h2>
-            <p><a href="#">Validare il codice HTML</a></p>
-            <p>Categoria: develop</p>
-            <p>Data: 18-9-2020</p>
+    <aside class="width80">
+         <h2>Articoli Correlati</h2>
+         
+         <div id="bgcorrelati">
+            <p><a href="javascript:void(0)">Validare il codice HTML</a></p>
+            <p><i class="fa-solid fa-tag"></i> Categoria: develop</p>
+            <h6 class="right"><i class="fa-solid fa-calendar-days"></i> Data: 18-9-2020</h6>
 
-            <p><a href="#">Correggere la sintassi</a></p>
-            <p>Categoria: develop</p>
-            <p>Data: 16-9-2020</p>
+            <p><a href="javascript:void(0)">Correggere la sintassi</a></p>
+            <p><i class="fa-solid fa-tag"></i> Categoria: develop</p>
+            <h6 class="right"><i class="fa-solid fa-calendar-days"></i> Data: 16-9-2020</h6>
 
-            <a href="#">Meno Kb nella pagina</a>
-            <p>Categoria: ottimizzazione</p>
-            <p>Data: 30-9-2020</p>
+            <a href="javascript:void(0)">Meno Kb nella pagina</a>
+            <p><i class="fa-solid fa-tag"></i> Categoria: ottimizzazione</p>
+            <h6 class="right"><i class="fa-solid fa-calendar-days"></i> Data: 30-9-2020</h6>
 
         </div>
     </aside>
 
 
+</div>
 
-    <footer class="width80">
+    <footer class="width81" id="bgfooter">
         <hr>
-        <p>Blog Epicode ©2023</p>
-        <p><i>Testata online di Mario Rossi, registrata con prot. n.213/2018 - via Luigi Einaudi 2 - Milano. P.IVA
-                00112233.</i> <a href="mailto:info@epicode.school">info@epicode.school</a></p>
+        <h5>Blog Epicode ©2023</h5>
+        <h5><i>Testata online di Mario Rossi, registrata con prot. n.213/2018 - via Luigi Einaudi 2 - Milano. P.IVA
+                00112233.</i> <a href="mailto:info@epicode.school">info@epicode.school</a></h5>
     </footer>
 
-</div>
+
 
 </body>
 </html>
