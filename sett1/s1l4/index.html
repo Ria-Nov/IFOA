@@ -9,25 +9,28 @@
 </head>
 <body>
     
-    <head>
+    <header id="bgheader" class="width80">
         <div>
-            <img src="assets/img/logo.svg" />
+            <img src="assets/img/logo.svg" id="imgheader"/>
         </div>
+        <p id="subheader">Epicode il blog dei developers</p>
         <nav>
             <ul>
-                <li>Home</li>
-                <li>Articoli</li>
-                <li>Lavora con Noi</li>
+                <li><a href="javascript:void(0)">Home</a></li>
+                <li><a href="javascript:void(0)">Articoli</a></li>
+                <li> <a href="javascript:void(0)">Job</a></li>
             </ul>
         </nav>
-    </head>
-<div id="bgbody">
-    <main>
-
-        <h2>Come creare un template per i post</h2>
-        <h4>di Mario Rossi - pubblicato il 25-10-2020</h4>
+    </header>
+<div id="bgbody" >
+    <main class="width80" id="bgmain">
 
         <article>
+        
+        <h2>Come creare un template per i post</h2>
+        <h5><i class="fa-solid fa-square-pen"></i> di Mario Rossi - <i class="fa-solid fa-clock"></i> pubblicato il 25-10-2020</h5>
+
+        
             <p>La prima cosa da fare è suddividere in blocchi logici la pagina, identificando le parti comuni da
                 applicare a tutte le pagine
             </p>
@@ -42,8 +45,8 @@
 
             </p>
 
-            <h2>Formattazione del codice</h2>
-            <p> Il testo dell'articolo dovrà essere formattato per identificare tutte le parti da <strong>selezionare con i CSS</strong>.
+            <p>Formattazione del codice
+            <br>Il testo dell'articolo dovrà essere formattato per identificare tutte le parti da <strong>selezionare con i CSS</strong>.
                 Perciò i passi saranno:
             <ol>
                 <li>Progettare su carta il markup finale, assegnando ad ogni specifico testo il tag appropriato</li>
@@ -57,7 +60,7 @@
 
             <table>
                 <tbody>
-                    <caption>Diffusione dei CSS</caption>
+                    <caption><i><b>Diffusione dei CSS</b></i></caption>
                     <thead>
                         <th>Anno</th>
                         <th>% di utilizzo </th>
@@ -97,14 +100,16 @@
                 Una volta ottimizzato il tutto, avremo raggiunto il nostro obiettivo ed essere stati dei veri developers
                 come loro:
             </p>
-
-            <iframe width="300" height="300" src="https://www.youtube.com/embed/dvOvHXruEDM"
+<div id="video">
+            <iframe src="https://www.youtube.com/embed/dvOvHXruEDM"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
+</div>
         </article>
            
         <section>
+            <h2>Novità</h2>
             <p> Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla nostra newsletter: </p>
             <form>
                 <input type="email" placeholder="inserisci la tua email">
@@ -114,7 +119,7 @@
         </section>
 
     </main>
-    <aside>
+    <aside class="width80" id="bgaside">
         <div>
             <h2>Articoli Correlati</h2>
             <p><a href="#">Validare il codice HTML</a></p>
@@ -134,7 +139,7 @@
 
 
 
-    <footer>
+    <footer class="width80">
         <hr>
         <p>Blog Epicode ©2023</p>
         <p><i>Testata online di Mario Rossi, registrata con prot. n.213/2018 - via Luigi Einaudi 2 - Milano. P.IVA

@@ -1,28 +1,138 @@
 /* IMPOSTAZIONI GENERALI */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root{
+    --azzurro: #0098C0;
+    --grigio: #d0cfcf;
+}
+
 html, body{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
 #bgbody{
     background-image: url('../img/sfondo.png');
-    background-repeat: repeat;
+}
+
+.width80{
+    width: 80vw;
+    margin: 10px auto;
 }
 
 /* HEADER */
+header{
+    box-shadow: 2px 2px 2px #464444;
+}
+
+#bgheader{
+    background-color: var(--azzurro);
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0), rgba(0,0,0,0.5));
+    text-align: center;
+    box-shadow: var(--grigio);
+}
+
+#imgheader{
+    width: 15%;
+}
+
+#subheader{
+    text-transform: uppercase;
+    color: #fff;
+}
+
+
+header ul li{
+    list-style: inside '⋆';
+    text-transform: uppercase;
+    color: #fff;
+}
+
+li a{
+    text-decoration-line: none;
+}
+
+li a:link, li a:visited{
+    color: #fff;
+}
+
+li a:hover, li a:active{
+    color: red;
+    text-decoration-line: underline;
+}
+
 
 /* MAIN */
+#bgmain{
+    background-color:#fff;
+    padding: 0px 0px 0px 10px;
+}
 
 /* ELEMENTI NEL MAIN - ARTICLE */
+h2{
+    font-weight:600;
+    margin: 0px;
+
+}
+
+h5{
+    color: var(--grigio);
+    font-weight: 400;
+}
+
+code{
+    background-color: var(--grigio);
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+strong{
+    color: #BF6EA0;
+}
+
+#video{
+    text-align:center;
+}
+iframe{
+    border-radius: 10px;
+    width: 90%;
+}
+
 
 /* TABELLE */
 
+table{
+    border-collapse: collapse;
+}
+th{
+    background-color: #3F6BCA;
+    color: white;
+    font-weight:400;
+    padding: 10px 15px;
+}
+
+tr{
+    text-align: center;
+    border-bottom: 2px solid #000;
+    padding: 10px;
+}
+
+tr:nth-child(even){
+    background-color: var(--grigio);
+}
+
 /* FORM */
+
+
+
+
 
 /* ELEMENTI NELL' ASIDE */
 
+#bgaside{
+    background-color:#fff;
+    padding: 10px 0px 0px 10px;
+    margin-top: -1rem;
+}
 /* FOOTER */
