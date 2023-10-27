@@ -105,6 +105,10 @@ button a:link, button a:visited{
     width: 100%;
 }
 
+#cards .maincard:first-child{
+    margin-top: 50px;
+}
+
 .maincard{
     border: 1px solid #dee1e3;
     width: 80%;
@@ -136,13 +140,6 @@ button a:link, button a:visited{
     padding-bottom: 30px;
 }
 
-#footer h3{
+#footer h3, #intfooter{
     padding-top: 30px;
-}
-
-#footer #intfooter{
-    margin: 0 auto;
-    font-size: small;
-    color: #fff;
-    padding-bottom: 30px;
 }
