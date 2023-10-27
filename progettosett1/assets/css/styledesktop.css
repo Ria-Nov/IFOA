@@ -22,14 +22,13 @@ h1, h2, h3, h4, h5, h6 {
 /* header */
 
 header{
-    text-align: center;
+    text-align: left;
     background-color: #000;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 10px 0px 10px 30px;
 }
 
 header img{
-    width: 40%;
+    width: 10%;
 }
 
 /* main - titolo */
@@ -38,7 +37,7 @@ header img{
     background-image: url('../img/banner.jpg');
     background-repeat: no-repeat;
     background-size:cover;
-    height: 35vh;
+    height: 40vh;
     padding: 40px;
 }
 
@@ -61,17 +60,22 @@ button a:link, button a:visited{
 
 /* main - body */
 
-#mainbody p, .maincard h3, .maincard p, #garanzie p{
-    padding: 0px 40px;
-}
-
 #mainbody h3:first-child{
     padding-top: 40px;
 }
 
+#inline{
+    display: inline-block;
+    text-align:left;
+    padding-left: 5vw;
+    width: 40vw;
+}
+
 #tondo{
+    display: inline-block;
     border-radius: 50%;
     margin: 20px auto;
+    padding-left: 5vw;
 }
 
 #mainbody h3:last-child{
@@ -103,16 +107,24 @@ button a:link, button a:visited{
 
 #cards img{
     width: 100%;
+    height: 100%;
 }
 
-#cards .maincard:first-child{
+#cards{
     margin-top: 50px;
+    padding-bottom: 30px;
 }
 
 .maincard{
     border: 1px solid #dee1e3;
-    width: 80%;
-    margin: 20px auto;
+    width: 30vw;
+    height: 40vh;
+    display: inline-block;
+    margin: 20px 10px;
+}
+
+.maincard h3, .maincard p, #garanzie p{
+    padding: 0px 40px;
 }
 
 /* footer */
@@ -143,7 +155,6 @@ button a:link, button a:visited{
 #footer h3{
     padding-top: 30px;
 }
-
 #intfooter{
     padding-top: 30px;
     font-size:small;
