@@ -132,12 +132,13 @@ button a:link, button a:visited{
     color: #fff;
 }
 
-#footer p.ffont{
+#footer address.ffont{
     margin: 0 auto;
     width: 40%;
     color: #fff;
     border-bottom: 1px solid #fff;
     padding-bottom: 30px;
+    font-style: normal;
 }
 
 #footer h3{

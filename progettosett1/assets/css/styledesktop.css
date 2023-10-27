@@ -59,8 +59,11 @@ button a:link, button a:visited{
 }
 
 /* main - body */
+#mainbody h4{
+    margin-bottom: 0px;
+}
 
-#mainbody h3:first-child{
+#mainbody h4:first-child{
     padding-top: 40px;
 }
 
@@ -78,9 +81,11 @@ button a:link, button a:visited{
     padding-left: 5vw;
 }
 
-#mainbody h3:last-child{
+#mainbody h4:last-child{
     padding-bottom: 40px;
 }
+
+
 
 /* main - aside */
 
@@ -94,7 +99,7 @@ button a:link, button a:visited{
     padding-top: 40px;
 }
 
-#garanzie p:last-child{
+#garanzie blockquote{
     padding-bottom: 40px;
 }
 
@@ -107,7 +112,6 @@ button a:link, button a:visited{
 
 #cards img{
     width: 100%;
-    height: 100%;
 }
 
 #cards{
@@ -116,14 +120,15 @@ button a:link, button a:visited{
 }
 
 .maincard{
+    vertical-align: top;
     border: 1px solid #dee1e3;
     width: 30vw;
-    height: 100%;
+    height: 70vh;
     display: inline-block;
     margin: 20px 10px;
 }
 
-.maincard h3, .maincard p, #garanzie p{
+.maincard h4, .maincard p, #garanzie p{
     padding: 0px 40px;
 }
 
@@ -144,13 +149,14 @@ button a:link, button a:visited{
     color: #fff;
 }
 
-#footer p.ffont{
+#footer address.ffont{
     margin: 0 auto;
     width: 15%;
     color: #fff;
     border-bottom: 1px solid #fff;
     padding-bottom: 30px;
     text-align:left;
+    font-style: normal;
 }
 
 #footer h3{
