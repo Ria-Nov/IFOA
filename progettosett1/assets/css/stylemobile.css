@@ -1,0 +1,146 @@
+/* generali */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body{
+    background-color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    color: #393d41;
+    font-size: 1.2rem;
+    line-height: 1.65;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 700;
+   color: #25a2c3;
+}
+
+/* header */
+
+header{
+    text-align: center;
+    background-color: #000;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+header img{
+    width: 40%;
+}
+
+/* main - titolo */
+
+#title{
+    background-image: url('../img/banner.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 35vh;
+    padding: 40px;
+}
+
+#title button{
+    background-color:#f04c2f;
+    padding: 10px 20px;
+    border-style: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 30px;
+}
+
+button a:link, button a:visited{
+ text-decoration: none;
+ color:#fff;
+}
+
+/* main - body */
+
+#mainbody p, .maincard h3, .maincard p, #garanzie p{
+    padding: 0px 40px;
+}
+
+#mainbody h3:first-child{
+    padding-top: 40px;
+}
+
+#tondo{
+    border-radius: 50%;
+}
+
+#mainbody h3:last-child{
+    padding-bottom: 40px;
+}
+
+/* main - aside */
+
+#garanzie{
+    background-color: #e22d0e;
+    color: #fff;
+}
+
+#garanzie h3{
+    color: #fff;
+    padding-top: 40px;
+}
+
+#garanzie p:last-child{
+    padding-bottom: 40px;
+}
+
+#caption, .ffont{
+    font-size: small;
+    margin-top: 0px;
+}
+
+/* main - cards */
+
+#cards img{
+    width: 100%;
+}
+
+.maincard{
+    border: 1px solid #dee1e3;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* footer */
+
+#footer{
+    background-color: #25a2c3;
+    color: #fff;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#footer a:link, #footer a:visited{
+    color: #c8e7f0;
+}
+
+#footer h3{
+    color: #fff;
+}
+
+#footer p.ffont{
+    margin: 0 auto;
+    width: 40%;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 30px;
+}
+
+#footer h3{
+    padding-top: 30px;
+}
+
+#footer .intfooter{
+    font-size: small;
+    color: #fff;
+    padding-bottom: 30px;
+}
