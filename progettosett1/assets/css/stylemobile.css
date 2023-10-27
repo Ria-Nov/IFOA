@@ -71,6 +71,7 @@ button a:link, button a:visited{
 
 #tondo{
     border-radius: 50%;
+    margin: 20px auto;
 }
 
 #mainbody h3:last-child{
