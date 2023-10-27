@@ -118,7 +118,7 @@ button a:link, button a:visited{
 .maincard{
     border: 1px solid #dee1e3;
     width: 30vw;
-    height: 40vh;
+    height: 100%;
     display: inline-block;
     margin: 20px 10px;
 }
