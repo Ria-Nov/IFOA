@@ -139,7 +139,8 @@ button a:link, button a:visited{
     padding-top: 30px;
 }
 
-#footer .intfooter{
+#footer #intfooter{
+    margin: 0 auto;
     font-size: small;
     color: #fff;
     padding-bottom: 30px;
