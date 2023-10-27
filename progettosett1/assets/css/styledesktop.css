@@ -146,17 +146,22 @@ button a:link, button a:visited{
 
 #footer p.ffont{
     margin: 0 auto;
-    width: 40%;
+    width: 15%;
     color: #fff;
     border-bottom: 1px solid #fff;
     padding-bottom: 30px;
+    text-align:left;
 }
 
 #footer h3{
     padding-top: 30px;
 }
+
 #intfooter{
     padding-top: 30px;
+    padding-bottom: 20px;
     font-size:small;
-    margin-bottom: 0px;
+    margin-bottom: 0px;    
 }
+
+
