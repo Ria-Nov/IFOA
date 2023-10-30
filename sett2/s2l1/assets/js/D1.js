@@ -77,8 +77,5 @@ let uguaglianza = name1 === name2;
 
 console.log(uguaglianza);
 
-name1 = "john";
-name2 = "john";
-
-let lowercase = name1 === name2
+let lowercase = name1 === name2.toLowerCase()
 console.log(lowercase);
