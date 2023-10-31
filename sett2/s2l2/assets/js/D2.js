@@ -74,7 +74,7 @@ let blackFriday = true;
 if(totalShoppingCart < 50){
  let spedizione = totalShoppingCart + 10
    if (blackFriday == true){
-     console.log(spedizione + (spedizione * 100 / 20));
+     console.log(spedizione - (spedizione * 0.8));
   }
 };
 
