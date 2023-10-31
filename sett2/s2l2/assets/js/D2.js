@@ -73,7 +73,6 @@ let blackFriday = true;
 
 if(totalShoppingCart < 50){
  let spedizione = totalShoppingCart + 10
-   return spedizione
    if (blackFriday == true){
      console.log(spedizione + (spedizione * 100 / 20));
   }
@@ -107,10 +106,10 @@ if ( n1 > n2 && n1 > 3 && n2 > n3){
 
 let valore = "ciao";
 
-if(valore == typeof Number){
+if(typeof valore == Number){
    console.log(true)
 } else{
-   (false);
+   console.log(false);
 }
 
 /* ESERCIZIO 9
