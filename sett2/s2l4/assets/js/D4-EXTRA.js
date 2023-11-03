@@ -22,7 +22,7 @@ function giveMeRandom(n){
 function checkArray(x){
 
     let r = giveMeRandom(6)
-    
+
     r.forEach((el) => { 
         if(el > 5){
            console.log(el)
@@ -31,14 +31,51 @@ function checkArray(x){
 
 }
 
-console.log(checkArray(giveMeRandom(6)))
+checkArray(giveMeRandom(6))
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "shoppingCartTotal" che calcola il totale dovuto al negozio (tenendo conto delle quantità di ogni oggetto).
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let shoppingCart = [
+    matita = {
+        price: 2,
+        name: 'pencil',
+        id: 99,
+        quantity: 3
+    },
+    astuccio = {
+        price: 20,
+        name: 'case',
+        id: 11,
+        quantity: 1
+    },
+    penna = {
+        price: 4,
+        name: 'pen',
+        id: 33,
+        quantity: 4
+    },
+    gomma = {
+        price: 1,
+        name: 'rubber',
+        id: 22,
+        quantity: 5
+    }
+]
+
+
+function shoppingCartTotal(){
+    let somma = 0
+    for( let i = 0; i < shoppingCart.length; i++){
+    somma += shoppingCart[i].price*shoppingCart[i].quantity
+    return somma
+    }
+
+}
+
+console.log(shoppingCartTotal())
 
 /* EXTRA 3
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
