@@ -126,9 +126,9 @@ console.log(reverseString('ciao'))
 */
 
 function upperFirst(x){
-    let reverse = x.replace(/(^\w|\s\w)/g, v => v.toUpperCase());
+    let upper = x.replace(/(^\w|\s\w)/g, v => v.toUpperCase());
 
-    return reverse;
+    return upper;
 
 }
 

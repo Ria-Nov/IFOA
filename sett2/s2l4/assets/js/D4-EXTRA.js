@@ -6,7 +6,32 @@
  La funzione deve inoltre ritornare la somma di tutti i valori maggiori di 5.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function giveMeRandom(n){
+    let ray = []
+    let i = 0
+    while ( i <= n){
+        ray.push(Math.floor(Math.random()*11))
+
+        i++
+
+    }
+
+    return ray
+}
+
+function checkArray(x){
+
+    let r = giveMeRandom(6)
+    
+    r.forEach((el) => { 
+        if(el > 5){
+           console.log(el)
+        }
+    });
+
+}
+
+console.log(checkArray(giveMeRandom(6)))
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
