@@ -69,10 +69,12 @@ let shoppingCart = [
 function shoppingCartTotal(){
     let somma = 0
     for( let i = 0; i < shoppingCart.length; i++){
-    somma += shoppingCart[i].price*shoppingCart[i].quantity
-    return somma
+    prezzo = shoppingCart[i].price*shoppingCart[i].quantity
+    somma += prezzo
     }
 
+
+ return somma
 }
 
 console.log(shoppingCartTotal())
@@ -82,34 +84,82 @@ console.log(shoppingCartTotal())
  Crea una funzione chiamata "addToShoppingCart" che riceve un nuovo oggetto dello stesso tipo, lo aggiunge a "shoppingCart" e ritorna il nuovo numero totale degli elementi.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+
+let newItem = {
+    price: 4,
+    name: 'stickers',
+    id: 77,
+    quantity: 9
+};
+
+
+function addToShoppingCart(x){
+    shoppingCart.push(x);
+    return shoppingCart.length
+
+}
+
+addToShoppingCart(newItem);
+
+console.log(shoppingCart.length)
 
 /* EXTRA 4
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "maxShoppingCart" che riceve l'array "shoppingCart" e ritorna l'oggetto più costoso in esso contenuto.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function maxShoppingCart(x){
+    let pricey = []
+    for (let i=0; i < shoppingCart.length; i++){
+        pricey.push(x[i].price)
+
+    }
+ let costo = Math.max(...pricey)
+ return costo;
+}
+
+console.log(maxShoppingCart(shoppingCart))
+
+
 
 /* EXTRA 5
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "latestShoppingCart" che riceve l'array "shoppingCart" e ritorna l'ultimo elemento.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function latestShoppingCart(x){
+    let latest = x.length - 1
+    return x[latest]
+}
+
+console.log(latestShoppingCart(shoppingCart))
 
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
  La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9 finchè il numero casuale non è maggiore di x per tre volte di fila.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function loopUntil(x){
+    round = 0
+    while (round < 3){
+        let number = Math.floor(Math.random()*10)
+
+    if (number > x){
+        round++
+        }
+     return number
+    }
+   
+}
+
+console.log(loopUntil(8))
 
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+
+
 
 /* EXTRA 8
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
