@@ -162,7 +162,6 @@ while (numericArray[i] !== 32) {
     es. [f, b, e] --> [6, 2, 5]
 */
 const charactersArray = ['g', 'n', 'u', 'z', 'd']
-const alfabeto = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'z']
 const newArray = []
 
 for (let i = 0; i < charactersArray.length; i++){
