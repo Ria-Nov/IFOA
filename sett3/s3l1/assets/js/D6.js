@@ -235,6 +235,19 @@ const movies = [
 
 // console.log(old(movies))
 
+const vecchio = (array) => {
+  let esito = {Year: 3000};
+  array.forEach((film) => {
+    let anno = parseInt(film.Year);
+    if (anno < esito.Year) {
+      esito = film;
+    }
+  });
+  return esito;
+}
+
+console.log(vecchio(movies))
+
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
