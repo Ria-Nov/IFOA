@@ -33,7 +33,7 @@
        */
  
        const changeUrls = function () {
-        let links = document.querySelectorAll('a');
+        let links = document.querySelectorAll('a:not(footer a)');
         links.forEach((el) => el.setAttribute('href', 'https://www.google.com'))
        }
 
@@ -196,7 +196,7 @@
      */
  
        const hideAllImages = function () {
-        let imgs = document.getElementsByTagName('img');
+        let imgs = document.getElementsByTagName('td img');
 
         imgs.forEach((el) => el.style.display = 'none')
        }
