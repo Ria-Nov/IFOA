@@ -96,3 +96,33 @@ const giornoAppuntamento = function(indiceGiorno) {
 }
 
 // A questo punto va creata la "griglia" dei div contenenti i giorni del mese in corso; questa griglie userà il numero di giorni per gestire l'array globale creato all'inizio e scriverà i vari div
+
+const creaGriglia = function(numeroGiorni){
+	const calendarDiv = document.getElementById('calendar');
+
+	for(let i = 0; i > numeroGiorni; i++){
+		const cellaGiorno = document.createElement('div');
+		cellaGiorno.classList.add('day');
+
+		cellaGiorno.addEventListener('click', function(e){
+			deselezionaCelle();
+			cellaGiorno.classList.add('selected');
+			giornoAppuntamento(i);
+			if(appointments[i].length > 0){
+				mostraAppuntamenti(i)
+			} else{
+				const divAppuntamenti = document.getElementById('appointments');
+				divAppuntamenti.style.display = 'none';
+			}
+		})
+
+		const valoreCella = document.createElement('h3');
+		valoreCella.innerText = i + 1;
+		cellaGiorno.appendChild(valoreCella);
+		calendarDiv.appendChild(cellaGiorno);
+
+		appointments.push([]);
+	}
+}
+
+creaGriglia(giorniTotali())
