@@ -621,23 +621,8 @@ console.log(halfTree(4));
 
 */
 
-// function tree(num) {
-//   let asterisco = '*';
-//   let rightTree = '';
-//   for (let i = 1; i <= num; i++) {
-//     rightTree += asterisco.repeat(i + 1) + '\n';
-//   }
-//   let leftTree = ''
-//   let empty = ' '
-//   for(let i = 1; i <= num; i++){
-//     leftTree += '\n' + empty.repeat(i);
-//   }
 
-//   return leftTree + rightTree
-// }
-
-
-
+console.log('Esercizio 28')
 function tree(num){
   for (i = 0; i <= num; i++) {
     let empty = "";
