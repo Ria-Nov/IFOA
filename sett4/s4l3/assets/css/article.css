@@ -1,0 +1,23 @@
+.article{
+    background-color: #fbf7e3;
+    color: #612406;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.article img{
+    margin-left: 20px;
+}
+
+.details{
+    margin-left: 20px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    .article{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

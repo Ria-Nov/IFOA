@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #612406;
+}
+
+.bgnav {
+  background-color: #fbf7e3;
+  border-radius: 50px;
+  padding: 2vh;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li {
+  background-color: #f3df85;
+  border-radius: 50px;
+  list-style: none;
+  padding: 1vh;
+}
+
+.logo {
+  width: 50px;
+}
+
+.shop {
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 2vw;
+}
+
+@media screen and (min-width: 1200px){
+
+.bgnav{
+  width: fit-content;
+  height: 100vh;
+}
+ ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+ }
+}
+
+.card {
+  background-color: #fbf7e3;
+  border-radius: 25%;
+}
+
+.imgcard {
+  border-radius: 60px 60px 0 0;
+  background-image: url("../imgs/honey.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 25vh;
+  width: 20vh;
+  object-fit: cover;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.descr p {
+  margin: 3px;
+}
+
+.descr h3 {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.bottone {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  background-color: #f3df85;
+  border-radius: 50px;
+  padding: 20px;
+  border: none;
+  margin: 10px;
+}
+
+.article {
+  background-color: #fbf7e3;
+  color: #612406;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.article img {
+  margin-left: 20px;
+}
+
+.details {
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .article {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.bodymain {
+    display: flex;
+    justify-content:space-evenly;
+    gap: 3vh;
+    flex-wrap: wrap;
+}
+
