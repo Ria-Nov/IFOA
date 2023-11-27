@@ -12,20 +12,48 @@ window.onscroll = function() {
   }
 
 
-//   let move1 = document.querySelectorAll('.move');
-//   let move2 = document.querySelectorAll('.move2');
-//   let move3 = document.querySelectorAll('.move3');
+document.addEventListener("DOMContentLoaded", function() {
+    let letters = document.querySelectorAll(".move");
 
-//   function showText(arr1, arr2, arr3){
-//         arr1.forEach((el) => {
-//             el.classList.toggle = 'opacity:0'
-//         });
-//         arr2.forEach((el) => {
-//             el.classList.toggle = 'opacity:0'
-//         });
-//         arr2.forEach((el) => {
-//             el.classList.toggle = 'opacity:0'
-//         });
-//   }
+    function showLetters(index) {
+        if (index <= letters.length) {
+            letters[index].style.opacity = "0";
+            setTimeout(function() {
+                letters[index].style.opacity = "1";
+                showLetters((index + 1) % letters.length);
+            }, 500); 
+        }
+    }
+    showLetters(0)
+})
+    
+document.addEventListener("DOMContentLoaded", function() {
+    let letters = document.querySelectorAll(".move2");
 
-//   showText(move1,move2,move3);
+    function showLetters(index) {
+        if (index <= letters.length) {
+            letters[index].style.opacity = "0";
+            setTimeout(function() {
+                letters[index].style.opacity = "1";
+                showLetters((index + 1) % letters.length);
+            }, 500); 
+        } 
+    }
+    showLetters(0)
+})
+
+document.addEventListener("DOMContentLoaded", function() {
+    let letters = document.querySelectorAll(".move3");
+
+    function showLetters(index) {
+        if (index <= letters.length) {
+            letters[index].style.opacity = "0";
+            setTimeout(function() {
+                letters[index].style.opacity = "1";
+                showLetters((index + 1) % letters.length);
+            }, 500); 
+        }
+    }
+    showLetters(0)
+    
+})

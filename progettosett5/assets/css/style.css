@@ -97,39 +97,6 @@ nav ul {
   font-weight: 400;
 }
 
-.move {
-  animation: M1 2s infinite alternate both 2s;
-}
-
-.move2 {
-  animation: M1 3s infinite alternate both 3s;
-}
-
-.move3{
-  animation: M1 4s infinite alternate both 4s;
-}
-
-@keyframes M1 {
-  from {
-    opacity: 1;
-  }
-
-  25% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  75% {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
 
 /* main - trending */
 
