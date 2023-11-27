@@ -94,6 +94,7 @@ nav ul {
   width: 50%;
   text-align: right;
   font-size: 30px;
+  font-weight: 400;
 }
 
 .move {
@@ -101,6 +102,10 @@ nav ul {
 }
 
 .move2 {
+  animation: M1 3s infinite alternate both 3s;
+}
+
+.move3{
   animation: M1 4s infinite alternate both 4s;
 }
 
@@ -109,7 +114,7 @@ nav ul {
     opacity: 1;
   }
 
-  20% {
+  25% {
     opacity: 0;
   }
 
@@ -246,7 +251,7 @@ nav ul {
   padding-bottom: 5vh;
   margin-left: 0;
   margin-top: 5vh;
-  position: sticky !important;
+  position: sticky;
   top: 12vh;
   z-index: 2;
 }
@@ -280,4 +285,118 @@ nav ul {
   padding-top: 3vh;
   margin-left: 0;
   padding-left: 0;
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+  nav {
+    align-items: center;
+  }
+  
+  ul li{
+    font-size: small;
+  }
+
+  .bodymain{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-right: 10vw;
+  }
+
+  .trendarticle{
+    width: 50%;
+  }
+
+  .trendstructure{
+    width:100%;
+  }
+
+  .btnarticle{
+    display: none;
+  }
+
+  .datatime{
+    display:flex;
+    justify-content: space-between;
+  }
+
+  #sticky{
+    position: static;
+    z-index: 0;
+    width: 100%;
+    margin-left: 10vw;
+    margin-bottom: 0px;
+  }
+
+  .scrollarticle{
+    margin-right: 0;
+    margin-top: 2vh;
+    width: 90%;
+  }
+
+  .links ul{
+    margin-bottom: 0;
+    gap: 30px;
+
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 575px){
+  .hide{
+    display: none;
+  }
+
+  ul li{
+    font-size: small;
+  }
+
+  .mmm{
+    display: none;
+  }
+
+  .tagline{
+    width: 100%;
+  }
+  .tagline h1{
+    font-size: 50px;
+    margin-top: 8vh;
+  }
+
+  .tagline h2{
+    font-size: 20px;
+  }
+
+  .trendstructure{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .trendarticle{
+    width: 100%;
+  }
+
+  .bodymain{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #sticky{
+    position: static;
+    z-index: 0;
+    width: 100%;
+    margin-left: 10vw;
+    margin-bottom: 0px;
+  }
+
+  .scrollarticle{
+    margin-right: 2vw;
+    margin-top: 2vh;
+    width: 100%;
+  }
+
+  .imgarticle{
+    width: 150px;
+  }
+
 }
