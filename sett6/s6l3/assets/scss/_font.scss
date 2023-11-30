@@ -1,0 +1,12 @@
+$title: Helvetica, sans-serif;
+$corpo: Arial, sans-serif;
+
+@mixin title-big {
+    font-family: #{$title};
+    font-size: xx-large;
+}
+
+@mixin mainBody{
+    font-family: #{$corpo};
+    font-size: medium;
+}
