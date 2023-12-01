@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* navbar */
+
+.navbar{
+  padding: 5px 11vw;
+}
+
+.avatar{
+  width: 50px;
+}
+
+.roundavatar{
+  padding:15px;
+  background-color: #c2c2c2;
+  border-radius: 50%;
+}
+
+/* header */
+.bghero{
+  background-image: url(../img/hero-img.png);
+  background-repeat: no-repeat;
+  background-color:blueviolet;
+  background-position-x: right;
+  background-size:contain;
+  width: 100%;
+}
+
+.btn{
+  padding: 25px auto;
+}
+
+.roundicon{
+  border-radius: 50%;
+  background-color: #F9EEDB;
+  color: #CFB180;
+  padding: 20px;
+}
+
+
+/* cards */

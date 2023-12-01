@@ -1,0 +1,12 @@
+@mixin mainBody{
+    font-family: #{$corpo};
+    font-size: medium;
+}
+
+@mixin title-big{
+    font-size: $font-size-xxlarge;
+    font-weight: 900;
+    line-height: 0.95;
+    margin-bottom: 1rem;
+    color: darken($bgcolor, 25); //sass:color
+}

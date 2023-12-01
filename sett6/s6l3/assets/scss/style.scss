@@ -3,23 +3,22 @@
 @import 'font';
 @import 'spacings';
 @import 'buttons';
+@import 'mixins';
 
+// nav{
+//     background-color: #{$bgcolor} ;
+//     text-align: center;
+// }
 
-nav{
-    background-color: #{$bgcolor} ;
-    text-align: center;
-}
+// nav ul li{
+//     @extend .inline;
+//     list-style: none;
+//     color: #fff;
+//     text-decoration: none;
+// }
 
-nav ul li{
-    @extend .inline;
-    list-style: none;
-    color: #fff;
-    text-decoration: none;
-}
-
-a{
-    text-decoration: none;
-    color: #fff;
-    font-family: #{$title};
-    padding: 20px;
-}
+// a{
+//     color: #fff;
+//     font-family: #{$title};
+//     padding: 20px;
+// }

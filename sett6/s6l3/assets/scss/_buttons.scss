@@ -1,20 +1,20 @@
 @mixin btn{
-    border-radius: 25px;
     border: none;
-    padding: 5px 20px;
+    padding: $padding-default;
+    transition: transform 0.3s ease-in-out;
+     &:hover{
+        transform: scale(1.1);
+     }
 }
 
-.btn-primary{
-    @include btn;
-    background-color: #{$but1} ;
-}
+$btn-color: (
+    primary: $but1,
+    secondary: $but2,
+    tertiary: $but3
+    );
 
-.btn-secondary{
-    @include btn;
-    background-color: #{$but2} ;
-}
-
-.btn-tertiary{
-    @include btn;
-    background-color: #{$but3} ;
+@each $key, $value in $btn-color {
+    .btn-#{$key} {background-color: $value;
+    color: $testo;
+    @include btn}
 }
