@@ -28,6 +28,10 @@ body{
     align-items:center;
 }
 
+.bgnav{
+    background-color: #101214;
+}
+
 /* main - title */
 
 .btn-dark{
@@ -90,4 +94,25 @@ body{
 .btnedit:hover, .btnservice:hover{
     background-color: #FFF;
     color: #000;
+}
+
+.posiabs{
+    position: absolute;
+    bottom: 35vh;
+    left: 2vh;
+}
+
+/* settings */
+
+.settings{
+    background-color: #fff;
+    color: #6c757d;
+}
+
+.btnsettings{
+    font-size: smaller;
+    margin-top: 10px;
+    background-color:#dbe3e8;
+    border-radius: 0;
+    border-bottom: 1px solid #6c757d;
 }
