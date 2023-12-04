@@ -54,7 +54,12 @@ body{
     width: fit-content;
 }
 
-/* footer */
+.zoom:hover{
+    transform:scale(1.2);
+    box-shadow: 5px 5px 10px #000;
+}
+
+/* main - footer */
 
 .btnservice{
     background-color: #101214;
