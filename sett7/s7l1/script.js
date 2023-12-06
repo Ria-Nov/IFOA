@@ -6,18 +6,18 @@ class User {
     this.location = location;
   }
 
-  confronto(x, y) {
-    if (x.age > y.age) {
+  confronto(x) {
+    if (this.age > x.age) {
       console.log(`${x.firstName} è più vecchi* di ${y.firstName}`);
     } else {
-      console.log(`${y.firstName} è più vecchi* di ${x.firstName}`);
+      console.log(`${x.firstName} è più vecchi* di ${this.firstName}`);
     }
   }
 }
 
 let utenteX = new User("Mario", "Rossi", 35, "Udine");
 let utenteY = new User("Giada", "Marini", 40, "Bologna");
-console.log(utenteX.confronto(utenteX, utenteY));
+console.log(utenteX.confronto(utenteY));
 
 console.log("Esercizio 2");
 
