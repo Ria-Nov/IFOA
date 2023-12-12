@@ -26,24 +26,13 @@ const getRecord = () => {
 getRecord();
 
 function handleData(id){
-    if (id !== null) {
+
         document.getElementById('inputName').value = id.name
         document.getElementById('inputPrice').value = id.price
         document.getElementById('inputDescription').value = id.description
         document.getElementById('inputBrand').value = id.brand
         document.getElementById('inputImageUrl').value = id.imageUrl
         document.getElementById('productPhoto').src = id.imageUrl
-    } else {
-
-        document.getElementById('inputName').value = ''
-        document.getElementById('inputPrice').value = ''
-        document.getElementById('inputDescription').value = ''
-        document.getElementById('inputBrand').value = ''
-        document.getElementById('inputImageUrl').value = ''
-        document.getElementById('productPhoto').src = ''
-        document.getElementById('productPhoto').alt = ''
-        
-    }
 }
 
 const sendData = (action, id) => {
