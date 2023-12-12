@@ -22,49 +22,6 @@ const getRecords = () => {
 
 getRecords();
 
-const sendData = (action, id) => {
-    const newRecord = {
-        "name": document.getElementById('inputName').value,
-        "brand": document.getElementById('inputBrand').value,
-        "description": document.getElementById('inputDescription').value,
-        "price": document.getElementById('inputPrice').value,
-        "imageUrl": document.getElementById('inputImageUrl').value,
-    }
-
-    fetch(url + id, {
-        method: "POST",
-        headers: headers,
-        body: JSON.stringify(newRecord)
-    })
-    .then((response) => response.json())}
-
-// const deleteRecord = (id) => {
-//   if (confirm("Confermi la tua scelta")) {
-//     const finalUrl = url + id;
-//     fetch(finalUrl, {
-//       method: "DELETE",
-//       headers: headers,
-//     }).then(() => {
-//       products.splice(
-//         products.findIndex((element) => element._id === id),
-//         1
-//       );
-//       createTable(products);
-//     });
-//   }
-// };
-
-
-function handleForm(data){
-        document.getElementById('inputName').value = data.name
-        document.getElementById('inputPrice').value = data.price
-        document.getElementById('inputDescription').value = data.description
-        document.getElementById('inputBrand').value = data.brand
-        document.getElementById('inputImageUrl').value = data.imageUrl
-        document.getElementById('productPhoto').src = data.imageUrl
-        document.getElementById('productPhoto').alt = "Immagine prodotto " + data.name
-}
-
 function createTable(data) {
   const row = document.querySelector(".row");
   row.innerHTML = "";

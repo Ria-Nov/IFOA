@@ -12,43 +12,108 @@ let products = [];
 const searchParams = new URLSearchParams(window.location.search);
 const id = searchParams.get("picId");
 
-const getRecords = () => {
-    fetch(url + id, {
-      headers: headers,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        products = data;
-      });
-  };
+const getRecord = () => {
+  fetch(url + id, {
+    headers: headers,
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      products = data;
+      handleData(data)
+    });
+};
 
-  getRecords();
+getRecord();
 
-  const sendData = (id) => {
+function handleData(id){
+    if (id !== null) {
+        document.getElementById('inputName').value = id.name
+        document.getElementById('inputPrice').value = id.price
+        document.getElementById('inputDescription').value = id.description
+        document.getElementById('inputBrand').value = id.brand
+        document.getElementById('inputImageUrl').value = id.imageUrl
+        document.getElementById('productPhoto').src = id.imageUrl
+    } else {
+
+        document.getElementById('inputName').value = ''
+        document.getElementById('inputPrice').value = ''
+        document.getElementById('inputDescription').value = ''
+        document.getElementById('inputBrand').value = ''
+        document.getElementById('inputImageUrl').value = ''
+        document.getElementById('productPhoto').src = ''
+        document.getElementById('productPhoto').alt = ''
+        
+    }
+}
+
+const sendData = (action, id) => {
     const newRecord = {
         "name": document.getElementById('inputName').value,
         "brand": document.getElementById('inputBrand').value,
         "description": document.getElementById('inputDescription').value,
         "price": document.getElementById('inputPrice').value,
-        "imageUrl": document.getElementById('inputImageUrl').value,
+        "imageUrl": document.getElementById('inputImageUrl').value
     }
 
-    fetch(url + id, {
+    const finalUrl = action === 'edit' ? url + id : url
+
+    fetch(finalUrl, {
         method: "POST",
         headers: headers,
         body: JSON.stringify(newRecord)
     })
-    .then((response) => response.json())}
+    .then((response) => response.json())
+    .then(data => {
+            console.log(data)
+            products.push(data)
+            location.href = 'index.html'
+        }
+    )}
 
-    const deleteRecord = (id) => {
-          if (confirm("Confermi la tua scelta")) {
-            const finalUrl = url + id;
-            fetch(finalUrl, {
-              method: "DELETE",
-              headers: headers,
-            }).then(() => {
-            //   delete
-            });
-          }
-        };
 
+const modifyData = () => {
+    const newRecord = {
+      name: document.getElementById("inputName").value,
+      brand: document.getElementById("inputBrand").value,
+      description: document.getElementById("inputDescription").value,
+      price: document.getElementById("inputPrice").value,
+      imageUrl: document.getElementById("inputImageUrl").value,
+    };
+  
+    fetch(url + id, {
+      method: "PUT",
+      headers: headers,
+      body: JSON.stringify(newRecord),
+    }).then((response) => response.json())
+    .then(data =>  {
+    location.href="index.html"})
+  };
+
+const deleteRecord = () => {
+    const finalUrl = url + id;
+    fetch(finalUrl, {
+      method: "DELETE",
+      headers: headers,
+    }).then(() => {
+        location.href = 'index.html'
+    });
+  };
+
+const form = document.querySelector("form");
+
+const resetForm = () => {
+  form.reset();
+};
+
+const cancellaButton = document.getElementById('cancellaButton')
+const modificaButton = document.getElementById('modificaButton')
+const saveButton = document.getElementById('buttonSave')
+
+const isModificaMode = () => {
+  return new URLSearchParams(window.location.search).get("picId") !== null;
+};
+
+
+cancellaButton.style.display = isModificaMode() ? "inline-block" : "none";
+modificaButton.style.display = isModificaMode() ? "inline-block" : "none";
+saveButton.style.display = isModificaMode() ? "none" : "inline-block";

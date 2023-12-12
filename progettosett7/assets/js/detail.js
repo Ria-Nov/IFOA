@@ -30,8 +30,9 @@ const getRecords = () => {
       let newCard = `<div class="card" style="width: 18rem;">
     <img src=${data.imageUrl} class="card-img-top" alt="Nokia">
     <div class="card-body">
-      <h5 class="card-title">${data.name}</h5>
-      <p class="card-text">${data.description}</p>
+      <h5 class="card-title">Prodotto: ${data.name}</h5>
+      <p class="card-text">Descrizione: ${data.description}</p>
+      <p class="card-text">Brand: ${data.brand}</p>
     </div>
   </div>
           `;

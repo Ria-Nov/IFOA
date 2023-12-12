@@ -45,9 +45,12 @@
     <div>
         <img src="" alt="" id="productPhoto" class="object-fit-contain border rounded" width="100%">
     </div>
-
-    <button type="button" class="btn btn-success" id="buttonSave" onclick="sendData()">Salva</button>
-    <button type="button" class="btn btn-danger mx-1" onclick="deleteRecord('${data._id}')">Elimina</button>
+<div class="text-center">
+    <button type="button" class="btn btn-success me-5" id="buttonSave" onclick="sendData()" >Salva</button>
+    <button type="button" class="btn btn-success me-5"  onclick="modifyData()" id="modificaButton">Modifica</button>
+    <button type="button" class="btn btn-primary mx-1 me-5" onclick="resetForm()" >Reset</button>
+    <button type="button" class="btn btn-danger mx-1" onclick="deleteRecord()" id="cancellaButton">Elimina</button>
+</div>
 
 
 
