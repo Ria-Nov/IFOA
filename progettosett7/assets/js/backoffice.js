@@ -73,7 +73,7 @@ const modifyData = () => {
       headers: headers,
       body: JSON.stringify(newRecord),
     }).then((response) => response.json())
-    .then(data =>  {
+    .then(() =>  {
     location.href="index.html"})
   };
 
