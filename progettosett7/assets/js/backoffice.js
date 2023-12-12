@@ -8,6 +8,8 @@ const headers = {
 };
 
 let products = [];
+const form = document.querySelector("form");
+
 
 const searchParams = new URLSearchParams(window.location.search);
 const id = searchParams.get("picId");
@@ -56,7 +58,9 @@ const sendData = (action, id) => {
             products.push(data)
             location.href = 'index.html'
         }
-    )}
+    )
+    validaProdotto(form)
+}
 
 
 const modifyData = () => {
@@ -85,9 +89,11 @@ const deleteRecord = () => {
     }).then(() => {
         location.href = 'index.html'
     });
-  };
+    validaProdotto(form)
+  
 
-const form = document.querySelector("form");
+};
+
 
 const resetForm = () => {
   form.reset();
@@ -105,3 +111,17 @@ const isModificaMode = () => {
 cancellaButton.style.display = isModificaMode() ? "inline-block" : "none";
 modificaButton.style.display = isModificaMode() ? "inline-block" : "none";
 saveButton.style.display = isModificaMode() ? "none" : "inline-block";
+
+function validaProdotto(form) {
+    if (form.inputName.value === "") {
+      alert("Il nome del prodotto è obbligatorio.");
+      return false;
+    }
+  
+    if (form.inputDescription.value.length < 10) {
+      alert("La descrizione del prodotto deve avere almeno 10 caratteri.");
+      return false;
+    }
+  
+    return true;
+  }
