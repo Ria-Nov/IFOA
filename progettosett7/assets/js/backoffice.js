@@ -64,7 +64,6 @@ const sendData = (action, id) => {
     })
     .then((response) => response.json())
     .then(data => {
-            console.log(data)
             products.push(data)
             location.href = 'index.html'
         }
