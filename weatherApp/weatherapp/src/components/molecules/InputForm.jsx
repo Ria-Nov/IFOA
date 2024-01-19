@@ -1,29 +1,44 @@
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import Container from 'react-bootstrap/Container';
 import axios from "axios";
 import { useState } from "react";
 import "./inputForm.css";
 
 const InputForm = () => {
-  const [data, setData] = useState({});
+  const [today, setToday] = useState({});
+  const [forecast, setForecast] = useState({});
   const [location, setLocation] = useState("");
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=6986dde0ccf0b9f290d18dd4ea8dc513`;
+  const urlToday = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=6986dde0ccf0b9f290d18dd4ea8dc513`;
+  const urlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=metric&appid=6986dde0ccf0b9f290d18dd4ea8dc513`;
 
   const searchLocation = (event) => {
     if (event.key === "Enter") {
-      axios.get(url).then((response) => {
-        setData(response.data);
+      axios.get(urlToday).then((response) => {
+        setToday(response.data);
       });
-      setLocation("");
+    //   axios.get(urlForecast)
+    //   .then((res) => {
+    //   setForecast(res.data.list[1].main)
+    //   console.log(res.data.list[1].main)})
+    //   .catch(err => console.log(err))
+    //   setLocation("");
+    fetch(urlForecast)
+    .then((response) => response.json())
+    .then((data) => {
+    setForecast(data.list[1].main);
+  });
+  setLocation('')
     }
   };
 
+
   return (
-    <>
+    <Container fluid>
       <Row className="flex-column">
         <Col className="mt-5 text-center">
-          <p className="display-6">Welcome!</p>
+          <p className="display-6">Will it Rain?</p>
           <div className="search">
             <input
               value={location}
@@ -35,48 +50,54 @@ const InputForm = () => {
           </div>
         </Col>
       </Row>
-      <Row>
-        <Col xs={2} className="bg-today ms-5 mt-5">
+      {today.main !== undefined && <Row className="justify-content-center">
+        <Col xs={3} className="bg-today ms-2 mt-5 text-center">
           <div>
-            <div className="fw-bold mt-3 display-6 ms-4">
-              <p>{data.name}</p>
+            <p className="text-center">Today's Weather</p>
+            <div className="fw-bold mt-3 display-6">
+              <p>{today.name}</p>
             </div>
-            <div className="ms-4">
-              {data.main ? <h1>{data.main.temp.toFixed()}° C</h1> : null}
+            <div>
+              {today.main ? <p className="display-6"> {today.main.temp.toFixed()}°</p> : null}
             </div>
-            <div className="ms-4">
-              {data.weather ? <p>{data.weather[0].main}</p> : null}
+            <div>
+              {today.weather ? <p>{today.weather[0].main}</p> : null}
             </div>
           </div>
 
-          {data.name !== undefined && (
+          {today.name !== undefined && (
             <div>
-              <div className=" ms-4">
-                {data.main ? (
-                  <p className="fw-bold">{data.main.feels_like.toFixed()}°C</p>
+              <div>
+                {today.main ? (
+                  <p className="fw-bold">{today.main.feels_like.toFixed()}°</p>
                 ) : null}
                 <p>Feels Like</p>
               </div>
-              <div className="ms-4">
-                {data.main ? (
-                  <p className="fw-bold">{data.main.humidity}%</p>
+              <div>
+                {today.main ? (
+                  <p className="fw-bold">{today.main.humidity}%</p>
                 ) : null}
                 <p>Humidity</p>
-              </div>
-              <div className="ms-4">
-                {data.wind ? (
-                  <p className="fw-bold">{data.wind.speed.toFixed()} km/h</p>
-                ) : null}
-                <p>Wind Speed</p>
               </div>
             </div>
           )}
         </Col>
-        <Col xs={6}>
-
+        <Col xs={5} className="bg-forecast mt-5 ms-4">
+                    <div className="text-center">
+                        <p>Tomorrow's Forecast</p>
+                        <div className="fw-bold mt-3 display-6">
+              <p>{today.name}</p>
+            </div>
+                        <p className="display-6">{forecast.temp?.toFixed()}°</p>
+                        <p>Min <span className="fw-bold">{forecast.temp_min?.toFixed()}°</span> -  Max <span className="fw-bold">{forecast.temp_max?.toFixed()}°</span></p>
+                        <p className="fw-bold">{forecast.feels_like?.toFixed()}°</p>
+                        <p>Feels Like</p>
+                       <p className="fw-bold">{forecast.humidity} %</p>
+                       <p>Humidity</p>
+                    </div>
         </Col>
-      </Row>
-    </>
+      </Row>}
+    </Container>
   );
 };
 
